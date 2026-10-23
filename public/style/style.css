@@ -1,0 +1,98 @@
+/* --- RESET I VARIABLES --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --nav-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --transition: 0.2s ease-in-out;
+}
+
+/* --- ESTILS GLOBALS --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- CAPÇALERA I NAVEGACIÓ --- */
+header {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.08);
+}
+
+/* --- CONTINGUT PRINCIPAL --- */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #4b5563;
+}
+
+/* --- PEU DE PÀGINA --- */
+footer {
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
